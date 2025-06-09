@@ -1,0 +1,45 @@
+{
+    "name": "frosh/shopmon",
+    "version": "1.0.0",
+    "description": "Shop monitoring plugin for Shopware 6",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Frosh\\Shopmon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FriendsOfShopware",
+            "homepage": "https://friendsofshopware.com"
+        }
+    ],
+    "extra": {
+        "shopware-plugin-class": "Frosh\\Shopmon\\FroshShopmon",
+        "label": {
+            "de-DE": "Shopmon",
+            "en-GB": "Shopmon"
+        },
+        "description": {
+            "de-DE": "Connector für Shopmon Shop Monitoring mit automatisch generiertem, einfach konfigurierbarem Zugriffsschlüssel. Erstellt Integration mit notwendigen Berechtigungen automatisch.",
+            "en-GB": "Connector for Shopmon Shop Monitoring with automatically generated, easy to configure access key. Creates integration with necessary permissions automatically."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://friendsofshopware.com",
+            "en-GB": "https://friendsofshopware.com"
+        },
+        "supportLink": {
+            "de-DE": "https://friendsofshopware.com",
+            "en-GB": "https://friendsofshopware.com"
+        }
+    },
+    "require": {
+        "shopware/core": "~6.5.0 || ~6.6.0 || ~6.7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    }
+}

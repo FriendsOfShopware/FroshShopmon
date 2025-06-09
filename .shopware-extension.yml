@@ -1,0 +1,60 @@
+store:
+    availabilities:
+        - German
+        - International
+    default_locale: en_GB
+    localizations:
+        - de_DE
+        - en_GB
+    categories:
+        - Administration
+    type: extension
+    icon: src/Resources/config/plugin.png
+    automatic_bugfix_version_compatibility: true
+    description:
+        de: Connector für Shopmon Shop Monitoring mit automatisch generiertem, einfach konfigurierbarem Zugriffsschlüssel. Erstellt Integration mit notwendigen Berechtigungen automatisch und speichert Base64-kodierte Zugangsdaten in der Systemkonfiguration für externe Überwachungssysteme.
+        en: Connector for Shopmon Shop Monitoring with automatically generated, easy to configure access key. Creates integration with necessary permissions automatically and stores Base64-encoded access credentials in system configuration for external monitoring systems.
+    installation_manual:
+        de: Installieren Sie das Plugin über den Plugin Manager. Nach der Installation wird automatisch eine Integration mit den erforderlichen Berechtigungen erstellt und die Zugangsdaten in der Systemkonfiguration gespeichert.
+        en: Install the plugin via the Plugin Manager. After installation, an integration with the required permissions is automatically created and the access credentials are stored in the system configuration.
+    tags:
+        de:
+            - Monitoring
+            - Integration
+            - API
+            - Shopmon
+        en:
+            - monitoring
+            - integration
+            - api
+            - shopmon
+    videos:
+        de: []
+        en: []
+    highlights:
+        de:
+            - Automatische Integration-Erstellung
+            - Base64-kodierte Zugangsdaten
+            - Einfache Konfiguration
+        en:
+            - Automatic integration creation
+            - Base64-encoded access credentials
+            - Easy configuration
+    features:
+        de:
+            - Automatische Integration mit erforderlichen Berechtigungen
+            - Sichere Zugangsdaten-Generierung
+            - Base64-kodierte Speicherung in Systemkonfiguration
+            - Kompatibel mit Shopmon Shop Monitoring
+        en:
+            - Automatic integration with required permissions
+            - Secure access credential generation
+            - Base64-encoded storage in system configuration
+            - Compatible with Shopmon Shop Monitoring
+    faq:
+        de: []
+        en: []
+    images: []
+
+changelog:
+    enabled: true

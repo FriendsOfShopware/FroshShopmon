@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Shop Monitoring</title>
+        <title lang="de-DE">Shop Überwachung</title>
+
+        <input-field type="textarea">
+            <name>integrationData</name>
+            <label>Integration Data (Base64)</label>
+            <label lang="de-DE">Integrationsdaten (Base64)</label>
+            <helpText>Base64 encoded JSON containing shop URL, client ID and client secret for monitoring integration</helpText>
+            <helpText lang="de-DE">Base64 kodierte JSON-Daten mit Shop-URL, Client-ID und Client-Secret für die Monitoring-Integration</helpText>
+            <disabled>true</disabled>
+        </input-field>
+    </card>
+
+</config>
