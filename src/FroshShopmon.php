@@ -17,10 +17,12 @@ class FroshShopmon extends Plugin
         parent::install($installContext);
 
         $integrationRepository = $this->container->get('integration.repository');
+        $aclRoleRepository = $this->container->get('acl_role.repository');
         $systemConfigService = $this->container->get(SystemConfigService::class);
 
         $installationService = new InstallationService(
             $integrationRepository,
+            $aclRoleRepository,
             $systemConfigService,
         );
         $installationService->install($installContext);
@@ -35,10 +37,12 @@ class FroshShopmon extends Plugin
         }
 
         $integrationRepository = $this->container->get('integration.repository');
+        $aclRoleRepository = $this->container->get('acl_role.repository');
         $systemConfigService = $this->container->get(SystemConfigService::class);
 
         $installationService = new InstallationService(
             $integrationRepository,
+            $aclRoleRepository,
             $systemConfigService,
         );
         $installationService->uninstall($uninstallContext);

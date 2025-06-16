@@ -22,6 +22,7 @@ class InstallationService
 
     public function __construct(
         private readonly EntityRepository $integrationRepository,
+        private readonly EntityRepository $aclRepository,
         private readonly SystemConfigService $systemConfigService
     ) {
     }
@@ -39,7 +40,7 @@ class InstallationService
 
     private function createIntegration(Context $context): void
     {
-        $accessKey = EnvironmentHelper::getVariable('SHOPMON_ACCESS_KEY', AccessKeyHelper::generateAccessKey('SWIA'));
+        $accessKey = EnvironmentHelper::getVariable('SHOPMON_ACCESS_KEY', AccessKeyHelper::generateAccessKey('integration'));
         $secretAccessKey = EnvironmentHelper::getVariable('SHOPMON_ACCESS_SECRET', AccessKeyHelper::generateSecretAccessKey());
 
         $this->integrationRepository->upsert([
@@ -50,6 +51,7 @@ class InstallationService
                 'secretAccessKey' => $secretAccessKey,
                 'aclRoles' => [
                     [
+                        'id' => self::INTEGRATION_ID,
                         'name' => 'frosh_shopmon_role',
                         'privileges' => [
                             'app:read',
@@ -72,6 +74,10 @@ class InstallationService
     {
         try {
             $this->integrationRepository->delete([
+                ['id' => self::INTEGRATION_ID]
+            ], $context);
+
+            $this->aclRepository->delete([
                 ['id' => self::INTEGRATION_ID]
             ], $context);
         } catch (\Exception $e) {
