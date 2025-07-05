@@ -60,7 +60,8 @@ class InstallationService
                             'scheduled_task:read',
                             'frosh_tools:read',
                             'system:clear:cache',
-                            'system:cache:info'
+                            'system:cache:info',
+                            'scheduled_task:update'
                         ]
                     ]
                 ]
