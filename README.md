@@ -5,15 +5,6 @@
 
 A Shopware 6 plugin that serves as a connector for Shopmon Shop Monitoring with automatically generated, easy to configure access credentials.
 
-## Features
-
-- 🔐 **Automatic Integration Creation**: Creates a Shopware integration with all necessary permissions automatically
-- 🔑 **Secure Credential Generation**: Generates secure access keys and client secrets  
-- 📦 **Base64 Encoded Storage**: Stores integration data as Base64-encoded JSON in system configuration
-- 🔄 **Upsert Functionality**: Updates existing integration instead of creating duplicates
-- ⚙️ **Easy Configuration**: Integration data is visible in the admin panel for easy setup
-- 🛡️ **Proper Permissions**: Includes all required permissions for shop monitoring
-
 ## Permissions
 
 The plugin automatically creates an integration with the following permissions:
@@ -78,32 +69,6 @@ The integration data contains:
 - Shopware 6.5.0 or higher
 - PHP 8.1 or higher
 
-### Testing
-
-```bash
-# Validate plugin structure
-shopware-cli extension validate /path/to/FroshShopmon
-
-# Install for testing
-bin/console plugin:install --activate FroshShopmon
-
-# Uninstall
-bin/console plugin:uninstall FroshShopmon
-```
-
-## Technical Details
-
-### Integration Management
-
-The plugin uses a fixed integration ID (`a1b2c3d4e5f6789012345678901234ab`) to ensure that reinstalling the plugin updates the existing integration rather than creating duplicates.
-
-### Environment Variables
-
-The plugin uses Shopware's `EnvironmentHelper` to read the `APP_URL` environment variable, falling back to `http://localhost` if not set.
-
-### Data Storage
-
-Integration credentials are stored as Base64-encoded JSON in the system configuration under the key `FroshShopmon.config.integrationData`.
 
 ## Compatibility
 
@@ -125,10 +90,4 @@ For support and issues, please visit:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Changelog
-
-### 1.0.0
-- Initial release
-- Automatic integration creation with monitoring permissions
-- Base64-encoded credential storage
 - Support for Shopware 6.5, 6.6, and 6.7
