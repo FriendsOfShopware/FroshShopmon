@@ -29,12 +29,12 @@ class InstallationService
 
     public function install(InstallContext $installContext): void
     {
-        $this->createIntegration($installContext->getContext());
+        $this->createIntegration(Context::createDefaultContext());
     }
 
     public function uninstall(UninstallContext $uninstallContext): void
     {
-        $this->removeIntegration($uninstallContext->getContext());
+        $this->removeIntegration(Context::createDefaultContext());
         $this->removeSystemConfig();
     }
 
