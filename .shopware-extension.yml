@@ -1,3 +1,4 @@
+compatibility_date: "2026-02-11"
 store:
     availabilities:
         - German
@@ -9,52 +10,71 @@ store:
     categories:
         - Administration
     type: extension
-    icon: src/Resources/config/plugin.png
+    icon: src/Resources/store/icon.png
     automatic_bugfix_version_compatibility: true
+    meta_title:
+        de: Shopmon Connector - Zentrales Shop-Monitoring
+        en: Shopmon Connector - Centralized Shop Monitoring
+    meta_description:
+        de: Verbinde deinen Shopware-Shop mit Shopmon für zentrales Monitoring aller Instanzen. Automatische Integration mit sicheren Zugangsdaten. Überwache Versionen, Scheduled Tasks und Performa
+        en: Connect your Shopware shop to Shopmon for centralized monitoring of all your instances. Automatic integration with secure credentials. Monitor versions, scheduled tasks and performance.
     description:
-        de: Connector für Shopmon Shop Monitoring mit automatisch generiertem, einfach konfigurierbarem Zugriffsschlüssel. Erstellt Integration mit notwendigen Berechtigungen automatisch und speichert Base64-kodierte Zugangsdaten in der Systemkonfiguration für externe Überwachungssysteme.
-        en: Connector for Shopmon Shop Monitoring with automatically generated, easy to configure access key. Creates integration with necessary permissions automatically and stores Base64-encoded access credentials in system configuration for external monitoring systems.
+        de: file:src/Resources/store/description.de.html
+        en: file:src/Resources/store/description.en.html
     installation_manual:
-        de: Installieren Sie das Plugin über den Plugin Manager. Nach der Installation wird automatisch eine Integration mit den erforderlichen Berechtigungen erstellt und die Zugangsdaten in der Systemkonfiguration gespeichert.
-        en: Install the plugin via the Plugin Manager. After installation, an integration with the required permissions is automatically created and the access credentials are stored in the system configuration.
+        de: file:src/Resources/store/installation_manual.de.html
+        en: file:src/Resources/store/installation_manual.en.html
     tags:
         de:
             - Monitoring
-            - Integration
-            - API
-            - Shopmon
+            - Überwachung
+            - dashboard
+            - Multi-Shop
         en:
             - monitoring
-            - integration
-            - api
-            - shopmon
+            - dashboard
+            - Multi-Shop
+            - Health check
     videos:
         de: []
         en: []
     highlights:
         de:
-            - Automatische Integration-Erstellung
-            - Base64-kodierte Zugangsdaten
-            - Einfache Konfiguration
+            - Automatische Integration mit Shopmon
+            - Zentrale Überwachung aller Shops
+            - Sichere Zugangsdaten-Generierung
         en:
-            - Automatic integration creation
-            - Base64-encoded access credentials
-            - Easy configuration
+            - Automatic integration with Shopmon
+            - Centralized monitoring of all shops
+            - Secure credential generation
     features:
         de:
-            - Automatische Integration mit erforderlichen Berechtigungen
-            - Sichere Zugangsdaten-Generierung
-            - Base64-kodierte Speicherung in Systemkonfiguration
-            - Kompatibel mit Shopmon Shop Monitoring
+            - Automatische Erstellung einer Integration mit minimalen Berechtigungen
+            - Base64-kodierte Zugangsdaten für einfache Konfiguration
+            - Unterstützung für FroshTools Health-Checks
+            - Cache-Verwaltung über Shopmon
+            - Scheduled Task Monitoring
+            - Plugin- und App-Übersicht
         en:
-            - Automatic integration with required permissions
-            - Secure access credential generation
-            - Base64-encoded storage in system configuration
-            - Compatible with Shopmon Shop Monitoring
+            - Automatic creation of integration with minimal permissions
+            - Base64-encoded credentials for easy configuration
+            - Support for FroshTools health checks
+            - Cache management via Shopmon
+            - Scheduled task monitoring
+            - Plugin and app overview
     faq:
         de: []
         en: []
-    images: []
-
+    image_directory: src/Resources/store/images
+build:
+    zip:
+        composer:
+            enabled: true
+        assets:
+            enabled: true
+            enable_es_build_for_admin: false
+            enable_es_build_for_storefront: false
+            disable_sass: false
+            npm_strict: false
 changelog:
     enabled: true
