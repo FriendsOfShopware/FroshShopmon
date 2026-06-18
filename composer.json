@@ -1,6 +1,6 @@
 {
     "name": "frosh/shopmon",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Shop monitoring plugin for Shopware 6",
     "type": "shopware-platform-plugin",
     "license": "MIT",
