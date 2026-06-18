@@ -11,7 +11,6 @@ The plugin automatically creates an integration with the following permissions:
 
 - `app:read` - Read access to apps
 - `plugin:read` - Read access to plugins  
-- `system_config:read` - Read access to system configuration
 - `scheduled_task:read` - Read access to scheduled tasks
 - `frosh_tools:read` - Read access to FroshTools (if installed)
 - `system:clear:cache` - Permission to clear cache
